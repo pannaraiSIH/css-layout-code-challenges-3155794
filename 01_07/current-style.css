@@ -1,5 +1,6 @@
 :root {
   --content-width: 50ch;
+  --inset: calc(((100vw - 50ch) / 4) * -1)
 }
 
 body {
@@ -37,11 +38,13 @@ blockquote p {
     float: left;
     float: inline-start;
     margin-inline-end: 3rem;
+    margin-inline-start: min(var(--inset), 0);
   }
 
   .pull-end {
     float: right;
     float: inline-end;
     margin-inline-start: 3rem;
+    margin-inline-end: min(var(--inset), 0);
   }
 }
