@@ -3,6 +3,8 @@
   width: clamp(calc(320px - 3rem), 75%, 70ch);
   height: calc(75vh - 2.5rem);
   border: 0.5rem solid black;
+  display: grid;
+  place-items: center;
 }
 
 .child {
