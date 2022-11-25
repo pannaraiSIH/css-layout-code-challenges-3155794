@@ -46,33 +46,42 @@ body > * {
 
 @media screen and (min-width: 100ch) {
   body {
-
+    display: grid;
+    grid-template-columns: minmax(15ch, 20%) 1fr minmax(15ch, 20%);
+    grid-template-areas: 
+    "header header header"
+    "navbar navbar navbar"
+    "main main sidebar"
+    "footer footer footer";
   }
 
   .header {
-    
+    grid-area: header;
   }
 
   .navbar {
-    
+    grid-area: navbar;
   }
   
   .main {
-
+    grid-area: main;
   }
 
   .sidebar {
-
+    grid-area: sidebar;
   }
 
   .footer {
-
+    grid-area: footer;
   }
 }
 
 @media screen and (min-width: 140ch) {
   body {
-
+    grid-template-areas:
+        "header header header"
+        "navbar  main sidebar"
+        "footer footer footer";
   }
 
   .navbar {
@@ -80,7 +89,7 @@ body > * {
   }
 
   .navbar ul {
-    
+    flex-direction: column;
   }
 
   .main {
