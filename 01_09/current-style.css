@@ -1,5 +1,6 @@
 :root {
   --content-width: 50ch;
+  --margin: calc((100vw - 50ch) / 4);
 }
 
 body {
@@ -24,19 +25,25 @@ img {
 }
 
 .main {
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .card {
-
+  width: clamp(20ch, 50%, var(--content-width));
+  border: 10px solid black;
+  margin: 2rem;
 }
 
 .card figcaption {
-
+ display: flex;
+ flex-direction: column;
+ padding: 0 2rem 2rem;
 }
 
 .card h2 {
-
+  margin-block-end: 0;
 }
 
 .card button {
@@ -44,4 +51,5 @@ img {
   border: 0.25rem solid black;
   font-size: 1rem;
   text-transform: uppercase;
+  align-self: flex-end;
 }
