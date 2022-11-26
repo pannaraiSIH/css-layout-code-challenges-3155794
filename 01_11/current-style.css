@@ -31,7 +31,7 @@ img {
 .card {
   width: clamp(20ch, 50%, var(--content-width));
   margin: 2rem;
-  border: .5rem solid black;
+  border: 0.5rem solid black;
   container-type: inline-size;
 }
 
@@ -40,14 +40,14 @@ img {
     display: flex;
   }
 
-  .card-inner > * {
+  .card-inner>* {
     max-width: 50%;
   }
-  .card-inner > img {
+
+  .card img {
     object-fit: cover;
   }
 }
-
 .card figcaption {
   display: flex;
   flex-direction: column;
