@@ -26,12 +26,14 @@ img {
 .main {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
 }
 
 .card {
-  width: clamp(20ch, 50%, var(--content-width));
-  margin: 2rem;
+  width: clamp(20ch, calc(1/4 * 100%), 100%);
  border: .5rem solid black;
+ /* flex: 0 1 clamp(20ch, calc(1/4 * 100%), 100%); */
 }
 
 .card figcaption {
@@ -50,4 +52,5 @@ margin-block-end: 0;
   border: 0.25rem solid black;
   font-size: 1rem;
   text-transform: uppercase;
+  justify-self: flex-end;
 }
